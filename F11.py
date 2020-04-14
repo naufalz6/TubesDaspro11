@@ -1,7 +1,7 @@
 #FUNGSI F10, FUNGSI MELIHAT KRITIK SARAN
 import csv
 
-def lihat_laporan(a):
+def lihat_laporan():
     print("Kritik dan saran:")
     f = open('kritiksaran.csv', 'r')
     with f:
@@ -12,5 +12,5 @@ def lihat_laporan(a):
     f.close()
     return
 
-lihat_laporan("")
+lihat_laporan()
 
