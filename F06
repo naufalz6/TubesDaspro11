@@ -1,7 +1,7 @@
 #FUNGSI F06, PENCARIAN WAHANA
 import csv
 
-def cari(a):
+def cari():
     print("Jenis batasan umur:")
     print("1. Anak-anak (<17 tahun)")
     print("2. Dewasa(>=17 tahun)")
@@ -53,4 +53,4 @@ def cari(a):
             print("Tidak ada wahana yang sesuai dengan pencarian kamu.")
     return
 
-cari("")
+cari()
