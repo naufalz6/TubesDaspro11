@@ -7,7 +7,7 @@ def load():
         csvfile = open(a,"r")
         with csvfile:
             # FUNGSI MEMBACA FILE BENTUK CSV
-            reader = csv.reader(csvfile, delimiter=',')
+            reader = csv.reader(csvfile, delimiter=';')
         return reader
 
     #INPUT UNTUK MEMASUKKAN NAMA FILE
