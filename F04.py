@@ -1,5 +1,3 @@
-import F01
-
 def signup(nama, tanggal_lahir, tinggi_badan, username, password):
 	user = F01.pilihan("User.csv")
 	i = 1
