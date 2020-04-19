@@ -1,7 +1,7 @@
 def signup(nama, tanggal_lahir, tinggi_badan, username, password):
 	user = F01.pilihan("user.csv")
 	i = 1
-	while i < 10 and user[i][0] != "":
+	while i <= 10 and user[i][0] != "":
 		i = i + 1 
 	kosong = i
 	user[kosong][0] = user[kosong][0] + nama
