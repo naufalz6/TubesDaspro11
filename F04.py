@@ -1,7 +1,9 @@
+import F01
+
 def signup(nama, tanggal_lahir, tinggi_badan, username, password):
 	user = F01.pilihan("user.csv")
 	i = 1
-	while i <= 10 and user[i][0] != "":
+	while i < 10 and user[i][0] != "":
 		i = i + 1 
 	kosong = i
 	user[kosong][0] = user[kosong][0] + nama
@@ -11,6 +13,7 @@ def signup(nama, tanggal_lahir, tinggi_badan, username, password):
 	user[kosong][4] = user[kosong][4] + password
 	user[kosong][5] = user[kosong][5] + "pemain"
 	user[kosong][6] = user[kosong][6] + "0"
+	print("Selamat menjadi pemain, " + str(user[kosong][0]) + ". Selamat bermain.")
 	return user
 nama = input("Masukan nama pemain : ")
 tanggal_lahir = input("Masukan tanggal lahir pemain (DD/MM/YYYY) : ")
