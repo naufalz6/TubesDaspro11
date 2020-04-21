@@ -50,7 +50,7 @@ def save ():
     writer=csv.writer(opentiket, delimiter=',')
     for i in range (count_E):
         writer.writerow(tiket[i])
-    openwahana.close()
+    opentiket.close()
 
     F=input("Masukkan nama File Refund Tiket: ")
     openrefund=open(F, 'w', newline='')
