@@ -1,11 +1,6 @@
-# Kasih masukan lagi
-# Stella, jangan import csv ya, perbaiki lagi ;)
-# ganbatte!!!!
-
-#FUNGSI F06, PENCARIAN WAHANA
-import csv
-
+#FUNGSI F06 CARI WAHANA
 def cari():
+    #output pengguna masukkan input
     print("Jenis batasan umur:")
     print("1. Anak-anak (<17 tahun)")
     print("2. Dewasa(>=17 tahun)")
@@ -39,25 +34,18 @@ def cari():
     else:
         BatasTinggi = "tanpa batasan"
 
+    #Menyimpan file CSV dalam array, tanpa menyimpan kolom pertama
+    array = ((pilihan("wahana.csv"))[1:])
+
     #OUTPUT HASIL
     print()
     print("Hasil pencarian:")
-    f=open("wahana.csv","r")
-    reader=csv.reader(f,delimiter=";")
-
     count=0     #mendeklarasikan jumlah wahana yang sesuai kriteria
 
-    with f:
-        next(reader)
-        for row in reader:
-            if (row[3]==BatasUmur and row[4]==BatasTinggi):
-                print(row[0] ," | ",row[1] ," | ",row[2])
-                count+=1
-        if (count==0):
-            print("Tidak ada wahana yang sesuai dengan pencarian kamu.")
+    for row in array:
+        if (row[3]==BatasUmur and row[4]==BatasTinggi):
+            print(row[0] ," | ",row[1] ," | ",row[2])
+            count+=1
+    if (count==0):
+        print("Tidak ada wahana yang sesuai dengan pencarian kamu.")
     return
-
-cari()
-
-
-
