@@ -42,3 +42,5 @@ def pilihan(A):
 		return refund
 	elif A == "kritiksaran.csv":
 		return kritiksaran
+
+# Mantap
