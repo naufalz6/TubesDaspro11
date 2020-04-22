@@ -23,4 +23,4 @@ password = input("Masukan password pemain : ")
 
 signup(nama, tanggal_lahir, tinggi_badan, username, password)
 
-
+# Mantap
