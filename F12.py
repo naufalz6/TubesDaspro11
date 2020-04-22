@@ -15,3 +15,7 @@ Harga_Tiket = input("Masukkan Harga Tiket: ")
 Batasan_Umur = input("Batasan umur: ")
 Batasan_Tinggi = input("Batasan tinggi badan: ")
 tambah_wahana()
+
+# Nabil, jangan import csv
+# mainin array aja, ubah lagi heeh ;)
+# ganbatte!!!!
