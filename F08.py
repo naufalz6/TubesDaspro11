@@ -1,3 +1,7 @@
+# Kasih masukan
+# Rena, jangan pake import csv ya, perbaiki lagi
+# ganbatte!!!!
+
 #F08, FUNGSI PENGGUNAAN TIKET
 
 import csv
