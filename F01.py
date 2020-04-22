@@ -4,19 +4,12 @@ import csv
 #Fungsi untuk membaca csv dan mengubah bentuk menjadi array
 def imp(a):
 	csvfile = open(a, "r")
-	array = ["" for j in range(11)]
-	x = 0
-	j = 0
 	with csvfile:
-		# FUNGSI MEMBACA FILE BENTUK CSV
-		reader = (csv.reader(csvfile, delimiter=';'))
-		for row in reader:
-			array[j] = row
-			j += 1
-	return array
-
-#INPUT UNTUK MEMASUKKAN NAMA FILE
-
+        # FUNGSI MEMBACA FILE BENTUK CSV
+		reader = csv.reader(csvfile, delimiter=',')
+		listreader = [i for i in reader]
+	return listreader
+	#INPUT UNTUK MEMASUKKAN NAMA FILE
 A=input("Masukkan nama File User: ")
 user=imp(A)
 B=input("Masukkan nama File Daftar Wahana: ")
@@ -33,7 +26,7 @@ G=input("Masukkan nama File Kritik dan Saran: ")
 kritiksaran=imp(G)
 print("File perusahaan Willy Wangky's Chocolate Factory telah di-load.")
 
-#Fungsi untuk digunakan dalam program utama
+	#Fungsi untuk digunakan dalam program utama
 def pilihan(A):
 	if A == "User.csv":
 		return user
