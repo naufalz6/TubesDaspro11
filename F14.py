@@ -15,3 +15,5 @@ def riwayat(ID):
 x  = input("Masukan ID wahana : ")
 
 riwayat(x)
+
+# mantap
