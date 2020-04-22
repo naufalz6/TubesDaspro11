@@ -7,7 +7,7 @@ import csv
 #Hitung jumlah baris pada file
 def countdata (a):
     jml_row=0
-    for row in open(a)
+    for row in open(a):
         jml_row+=1
     return jml_row
 
