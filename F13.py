@@ -19,4 +19,7 @@ def topup():
     f.close()
     return
 
+# Kasih masukan ya
+# programnya gak usah import csv lagi, jadi kita di programnya mainin array aja
+# ubah lagi ya Ren :), semangatttt!!!!!
     
