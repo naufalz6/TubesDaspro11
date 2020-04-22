@@ -44,3 +44,4 @@ x = input("Masukan jumlah tiket : ")
 
 refund(n,m,x)
 
+# Mantap
