@@ -2,7 +2,7 @@
 
 def lihat_laporan():
     print("Kritik dan saran:")
-    arrayy = (pilihan("kritiksaran.csv")[1:]) #Array yang menampung data kritik saran tanpa kolom pertama
+    arrayy = (pilihan("kritiksaran.csv")[1:]) #Array yang menampung data kritik saran tanpa baris pertama
 
     #Mengukur jumlah kolom
     length=0
