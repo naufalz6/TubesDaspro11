@@ -1,3 +1,7 @@
+# Kasih masukan
+# Stella, jangan import csv, perbaiki lagi
+# ganbatte!!!!
+
 #FUNGSI F10, FUNGSI MELIHAT KRITIK SARAN
 import csv
 
