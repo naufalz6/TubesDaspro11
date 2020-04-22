@@ -65,3 +65,6 @@ def save ():
     openks.close()
 
     print("Data berhasil disimpan!")
+
+    #edit 23/4/2020 jam 1:08AM
+    #log  : mengganti typo pada baris 22, tadinya writer(opendw) menjadi writer(openwahana)
