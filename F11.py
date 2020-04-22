@@ -1,45 +1,33 @@
 #FUNGSI F11, FUNGSI MELIHAT KRITIK SARAN
-import csv
 
 def lihat_laporan():
-    length = 0
     print("Kritik dan saran:")
-    f = open('kritiksaran.csv', 'r')
+    arrayy = (pilihan("kritiksaran.csv")[1:]) #Array yang menampung data kritik saran tanpa kolom pertama
 
-    with f:
-        reader = csv.reader(f,delimiter=';')
-        # Agar row pertama tidak termasuk
-        next(reader)
-        listreader = list(reader)
+    #Mengukur jumlah kolom
+    length=0
+    for row in arrayy:
+        length+=1
 
-        # Mengukur panjang baris
-        for row in listreader:
-            length+=1
+    # Menampung ID wahana ke dalam array
+    array = [0 for i in range(length)]
+    i=0
+    for row in (arrayy):
+        array[i] = row[2]
+        i+=1
 
-        # Menampung ID wahana ke dalam array
-        array = [0 for i in range(length)]
-        i=0
-        for row in listreader:
-            array[i] = row[2]
-            i+=1
-        j=0
-        mini = 0
+    mini = 0 #Menyatakan nilai i terkecil
+    #Fungsi Sort Kode
+    for x in range(length):
+        min = "[[[[[["
+        for i in range(length):
+            if array[i] <= min:
+                min = array[i]
+                mini = i
 
-        #Fungsi Sort Kode
-        for x in range(length):
-            min = "ZZZ999"
-            for i in range(length):
-                if array[i] <= min:
-                    min = array[i]
-                    mini = i
-            #Output sesuai dengan urutan yang sudah di sort
-            print((listreader[mini])[2] + " | " + (listreader[mini])[1] + " | " + (listreader[mini])[0] + " | " + (listreader[mini])[3])
-            j+=1
-            array[mini] = "ZZZ999"
-            min = "ZZZ999"
+        #Output sesuai dengan urutan yang sudah di sort
+        print((arrayy[mini])[2] + " | " + (arrayy[mini])[1] + " | " + (arrayy[mini])[0] + " | " + (arrayy[mini])[3])
+        #Set nilai yang sudah di sortir menjadi nilai yang pasti lebih besar terbesar agar bisa dibandingkan
+        array[mini] = "[[[[[["
+        min = "[[[[[["
     return
-lihat_laporan()
-
-# Kasih masukan ya
-# Stella, jangan import csv, pake array aja :)
-# semangat!!!
