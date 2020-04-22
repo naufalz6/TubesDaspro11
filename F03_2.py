@@ -1,13 +1,9 @@
-#F03, FUNGSI SAVE FILE
-#variabel yang sama mengacu pada F01
-#mohon koreksinya temen-temen hehe
-
 import csv
 
 #Hitung jumlah baris pada file
 def countdata (a):
     jml_row=0
-    for row in open(a):
+    for row in open(a, "r"):
         jml_row+=1
     return jml_row
 
@@ -23,7 +19,7 @@ def save ():
     B=input("Masukkan nama File Daftar Wahana: ")
     openwahana=open(B, 'w', newline='')
     count_B=countdata(B)
-    writer=csv.writer(opendw, delimiter=',')
+    writer=csv.writer(openwahana, delimiter=',')
     for i in range (count_B):
         writer.writerow(wahana[i])
     openwahana.close()
