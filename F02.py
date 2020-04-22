@@ -20,3 +20,4 @@ password = input("Masukkan password: ")
 print(login(username,password))
 
 #Blm di cek ulang per 23/4/2020 jam 1:00 AM
+#tolong di cek karena ada yang berubah per 23/4/2020 jam 1:00 AM
