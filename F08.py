@@ -1,5 +1,4 @@
 #F08, FUNGSI PENGGUNAAN TIKET
-# belom jadi
 
 import csv
 
@@ -17,7 +16,7 @@ def main():
         next(reader)
         for row in reader:
             if ((row[2]==idw) and (row[1]==tgl)):
-                if (jml<=row[3]):
+                if (jml<=(int(row[3]))):
                     print("Terima kasih telah bermain.")
                 else :
                     print("Tiket anda tidak valid dalam sistem kami")
