@@ -1,6 +1,7 @@
 #B03, Best Wahana
 
 def best_wahana():
+    #Membuang baris pertama array
     data1 = ((pilihan("tiket.csv"))[1:])
     data2 = ((pilihan("wahana.csv"))[1:])
 
