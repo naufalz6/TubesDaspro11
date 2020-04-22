@@ -1,3 +1,7 @@
+# Kasih masukan lagi
+# Stella, jangan import csv ya, perbaiki lagi ;)
+# ganbatte!!!!
+
 #FUNGSI F06, PENCARIAN WAHANA
 import csv
 
@@ -54,3 +58,6 @@ def cari():
     return
 
 cari()
+
+
+
