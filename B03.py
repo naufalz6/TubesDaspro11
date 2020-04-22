@@ -1,18 +1,8 @@
 #B03, Best Wahana
-import csv
 
 def best_wahana():
-    tiket = open("tiket.csv","r")
-    wahana = open("wahana.csv","r")
-    tiketreader=csv.reader(tiket,delimiter=";")
-    wahanareader=csv.reader(wahana,delimiter=";")
-    next(tiketreader)
-    next(wahanareader)
-
-    with tiket:
-        data1 = list(tiketreader)
-    with wahana:
-        data2 = list(wahanareader)
+    data1 = ((pilihan("tiket.csv"))[1:])
+    data2 = ((pilihan("wahana.csv"))[1:])
 
     length=0
     for row in data1:
@@ -36,9 +26,9 @@ def best_wahana():
 
     #Membuat Array yang menampung total Pembelian Tiket per Wahana
     arrayWahana = [["" for i in range(3)] for j in range (100)]
-
     current = array[0][0]
-    for x in range(1,length):
+    for x in range(length):
+        current = array[x][0]
         for u in range(length):
             if (array[u][0] == current) and (array[u][0]!= ""):
                 arrayWahana[Z][0] = array[u][0]
@@ -49,11 +39,12 @@ def best_wahana():
                 arrayWahana[Z][2] = sum
         Z += 1
         sum = 0
-        current = array[x][0]
+
 
     maxx= 0
     #Array yang menampung 3 pembelian tertinggi
     arrayBaru = [["" for i in range(3)] for i in range(3)]
+
 
     #FUNGSI SORT
     for j in range(3):
@@ -62,6 +53,7 @@ def best_wahana():
                 if (int(arrayWahana[i][2]) >= int(maxx)):
                     maxx = int(arrayWahana[i][2])
                     maxi = i
+
         arrayBaru[j] = [arrayWahana[maxi][0],arrayWahana[maxi][1],arrayWahana[maxi][2]]
         arrayWahana[maxi] = [0,0,0]
         maxx = 0
