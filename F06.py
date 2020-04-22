@@ -34,7 +34,7 @@ def cari():
     else:
         BatasTinggi = "tanpa batasan"
 
-    #Menyimpan file CSV dalam array, tanpa menyimpan kolom pertama
+    #Menyimpan file CSV dalam array, tanpa menyimpan baris pertama
     array = ((pilihan("wahana.csv"))[1:])
 
     #OUTPUT HASIL
