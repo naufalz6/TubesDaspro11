@@ -45,3 +45,8 @@ def cari_pemain(username):
         
 username = input("Masukkan username: ")
 cari_pemain(username)
+
+
+# Kasih masukan ya
+# Kevin, jangan pake import csv ya, perbaiki lagi :)
+# Semangat!!!
