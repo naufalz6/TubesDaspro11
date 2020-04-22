@@ -8,7 +8,8 @@ def main():
     idw=input("Masukkan ID wahana:")
     tgl=input("Masukkan tanggal hari ini:")
     jml=int(input("Jumlah tiket yang digunakan:"))
-
+    
+    #Ubah file penggunaan tiket
     f=open("penggunaan.csv", "r")
     reader=csv.reader(f, delimiter=";")
 
@@ -22,5 +23,17 @@ def main():
                     print("Tiket anda tidak valid dalam sistem kami")
             else :
                 print("Tiket anda tidak valid dalam sistem kami")
+    f.close()
 
+    #Ubah file kepemilikan tiket
+    y=open("tiket.csv", "w")
+    reader=csv.reader(y, delimiter=";")
+    
+    with y:
+        next(reader)
+        for row in reader:
+            if (row[1]==idw):
+                row[2]=str(int(row[2])-jml)
+    y.close()
+    
     return
