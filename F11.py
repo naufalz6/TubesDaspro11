@@ -39,3 +39,7 @@ def lihat_laporan():
             min = "ZZZ999"
     return
 lihat_laporan()
+
+# Kasih masukan ya
+# Stella, jangan import csv, pake array aja :)
+# semangat!!!
