@@ -31,3 +31,5 @@ def main():
             tiket[i][2]==str(int(tiket[i][2])-jml)
     
     return 
+
+# 24/4/2020 udah diubah sal hehe, coba diperiksa lagi 
