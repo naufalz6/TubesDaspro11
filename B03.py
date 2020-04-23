@@ -1,3 +1,5 @@
+# Mantap
+
 #B03, Best Wahana
 
 def best_wahana():
