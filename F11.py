@@ -1,3 +1,5 @@
+# Mantap
+
 #FUNGSI F11, FUNGSI MELIHAT KRITIK SARAN
 
 def lihat_laporan():
