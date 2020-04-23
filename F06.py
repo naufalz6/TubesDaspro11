@@ -1,3 +1,5 @@
+# Mantap
+
 #FUNGSI F06 CARI WAHANA
 def cari():
     #output pengguna masukkan input
