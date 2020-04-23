@@ -3,7 +3,7 @@ def exit():
     pilihan=input("Apakah anda mau melakukan penyimpanan file yang sudah dilakukan (Y/N) ? ")
 
     while (pilihan!="Y" and pilihan!="N"):
-        pilih = input("Apakah anda mau melakukan penyimpanan file yang sudah dilakukan (Y/N) ? ")
+        pilihan = input("Apakah anda mau melakukan penyimpanan file yang sudah dilakukan (Y/N) ? ")
 
     if (pilihan == "Y"):
         save()
