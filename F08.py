@@ -4,7 +4,7 @@
 
 #F08, FUNGSI PENGGUNAAN TIKET
 
-import csv
+import F01
 
 def main():
     
@@ -12,31 +12,22 @@ def main():
     tgl=input("Masukkan tanggal hari ini:")
     jml=int(input("Jumlah tiket yang digunakan:"))
     
-    #Ubah file penggunaan tiket
-    f=open("penggunaan.csv", "r")
-    reader=csv.reader(f, delimiter=";")
-
-    with f:
-        next(reader)
-        for row in reader:
-            if ((row[2]==idw) and (row[1]==tgl)):
-                if (jml<=(int(row[3]))):
-                    print("Terima kasih telah bermain.")
-                else :
-                    print("Tiket anda tidak valid dalam sistem kami")
+    penggunaan = F01.pilihan("penggunaan.csv") 
+    i = 0
+    for i in range (11):
+        if ((penggunaan[i][2]==idw) and (penggunaan[i][1]==tgl)):
+            if(jml<=(int(penggunaan[i][3]))):
+                print("Terima kasih telah bermain.")
             else :
                 print("Tiket anda tidak valid dalam sistem kami")
-    f.close()
-
-    #Ubah file kepemilikan tiket
-    y=open("tiket.csv", "w")
-    reader=csv.reader(y, delimiter=";")
+        else :
+            print("Tiket anda tidak valid dalam sistem kami")
     
-    with y:
-        next(reader)
-        for row in reader:
-            if (row[1]==idw):
-                row[2]=str(int(row[2])-jml)
-    y.close()
+    # ubah isi file kepemilikan tiket
+    tiket = F01.pilihan("tiket.csv")
+    i = 0
+    for i in range (11):
+        if (tiket[i][1]==idw):
+            tiket[i][2]==str(int(tiket[i][2])-jml)
     
-    return
+    return 
