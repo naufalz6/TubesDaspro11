@@ -28,7 +28,7 @@ print("File perusahaan Willy Wangky's Chocolate Factory telah di-load.")
 
 	#Fungsi untuk digunakan dalam program utama
 def pilihan(A):
-	if A == "User.csv":
+	if A == "user.csv":
 		return user
 	elif A == "wahana.csv":
 		return wahana
