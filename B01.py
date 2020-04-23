@@ -42,8 +42,8 @@ def decrypt(encrypt,key,factor):
 password = input("masukan pass : ")
 
 kunci = key(password)
-factor = factor(mau,password)
-enkripsi = encrypt(mau,password)
+factor = factor(kunci,password)
+enkripsi = encrypt(kunci,password)
 
 
 decrypt(enkripsi, kunci, factor)
