@@ -39,6 +39,7 @@ def JumlahTiket(username):
                     break
     tiket.close()
     wahana.close()
+    return
 username = input("Masukkan username: ")
 JumlahTiket(username)
                 
