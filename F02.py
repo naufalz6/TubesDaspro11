@@ -11,7 +11,3 @@ def login(username, password):
 		if check == False:
 			return("Ups, password salah atau kamu tidak terdaftar dalam sistem kami. Silakan coba lagi")		
 	return ("Selamat bersenang - senang, " + username)rname)
-
-
-#Blm di cek ulang per 23/4/2020 jam 1:00 AM
-#tolong di cek karena ada yang berubah per 23/4/2020 jam 1:00 AM
