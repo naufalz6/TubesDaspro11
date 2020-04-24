@@ -1,12 +1,14 @@
 import F01 as ld
 
 def tambah_wahana(ID_Wahana,Nama_Wahana,Harga_Tiket,Batasan_Umur,Batasan_Tinggi):
+	#load file wahana
 	wahana = ld.pilihan("wahana.csv")
-	for i in range(11):
+	for i in range(11):    #mencari indeks dari mark
 		if wahana[i][0] == "":
 			p = i
 			break
-	wahana[p][0] = ID_Wahana
+	#mengisi mark dengan data" yang telah diinput
+	wahana[p][0] = ID_Wahana 
 	wahana[p][1] = Nama_Wahana
 	wahana[p][2] = Harga_Tiket
 	wahana[p][3] = Batasan_Umur
