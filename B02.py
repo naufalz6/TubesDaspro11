@@ -3,15 +3,12 @@ import F01
 def upgrade_gold(username):
 	user = F01.pilihan("user.csv")
 	premium = F01.pilihan("premium.csv")
-	check = False
-	while not(check) :
-		for i in range(11):
-			if (user[i][3] == username):
-				check = True
-				indexuser = i
-				break
+	for i in range(11):
+		if (user[i][3] == username):
+			indexuser = i
+			break
 	for j in range(11):
-		if premium[j][0] == '':
+		if (premium[j][0] == ''):
 			p = j
 			break
 	premium[p][0] = user[indexuser][0]
@@ -21,4 +18,5 @@ def upgrade_gold(username):
 	premium[p][4] = user[indexuser][4]
 	premium[p][5] = user[indexuser][5]
 	premium[p][6] = user[indexuser][6]
+	print("Akun Anda telah diupgrade")
 	return premium
