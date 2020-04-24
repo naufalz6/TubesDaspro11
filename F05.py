@@ -1,15 +1,13 @@
 def cari_pemain(username):
     import csv
     data = open("user.csv",'r')
-    reader = csv.reader(data,delimiter=',')
-    row =next(data)
     x=0
     nama=""
     tanggal=""
     tinggi=""
     current = ""
     available=False
-    while(row[x]!=mark):
+    for row in (data):
         while(row[x]!=";"):
             nama=nama+row[x]
             x+=1
@@ -29,7 +27,6 @@ def cari_pemain(username):
             available=True
             break
         else:
-            row = next(data)
             nama=""
             tanggal=""
             tinggi=""
@@ -41,12 +38,8 @@ def cari_pemain(username):
         print("Tanggal Lahir Pemain:",tanggal)
     else:
         print("Username pemain tidak ditemukan")
+    data.close()
     return
         
 username = input("Masukkan username: ")
 cari_pemain(username)
-
-
-# Kasih masukan ya
-# Kevin, jangan pake import csv ya, perbaiki lagi :)
-# Semangat!!!
