@@ -1,6 +1,4 @@
-# Kasih masukan
-# Rena, jangan pake import csv ya, perbaiki lagi
-# ganbatte!!!!
+# Mantap
 
 #F08, FUNGSI PENGGUNAAN TIKET
 
@@ -32,4 +30,4 @@ def main():
     
     return 
 
-# 24/4/2020 udah diubah sal hehe, coba diperiksa lagi 
+
