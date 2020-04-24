@@ -3,7 +3,7 @@ import F01 as ld
 def tambah_wahana(ID_Wahana,Nama_Wahana,Harga_Tiket,Batasan_Umur,Batasan_Tinggi):
 	wahana = ld.pilihan("wahana.csv")
 	for i in range(11):
-		if wahana[i][0] != "":
+		if wahana[i][0] == "":
 			p = i
 			break
 	wahana[p][0] = ID_Wahana
