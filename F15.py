@@ -37,7 +37,8 @@ def JumlahTiket(username):
                 if(ID==ID_Wahana):
                     print(ID,"|",Nama_Wahana,"|",Jumlah.strip())
                     break
-            
+    tiket.close()
+    wahana.close()
 username = input("Masukkan username: ")
 JumlahTiket(username)
                 
