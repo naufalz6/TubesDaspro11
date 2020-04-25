@@ -1,10 +1,9 @@
-# Mantap
-
 #FUNGSI F11, FUNGSI MELIHAT KRITIK SARAN
+import F01
 
 def lihat_laporan():
     print("Kritik dan saran:")
-    arrayy = (pilihan("kritiksaran.csv")[1:]) #Array yang menampung data kritik saran tanpa baris pertama
+    arrayy = F01.pilihan("kritiksaran.csv")[1:] #Array yang menampung data kritik saran tanpa baris pertama
 
     #Mengukur jumlah kolom
     length=0
@@ -28,8 +27,10 @@ def lihat_laporan():
                 mini = i
 
         #Output sesuai dengan urutan yang sudah di sort
-        print((arrayy[mini])[2] + " | " + (arrayy[mini])[1] + " | " + (arrayy[mini])[0] + " | " + (arrayy[mini])[3])
+        if (arrayy[mini][2]!="" and (arrayy[mini])[1]!="" and (arrayy[mini])[1]!="" ): #selain data kosong
+            print((arrayy[mini])[2] + " | " + (arrayy[mini])[1] + " | " + (arrayy[mini])[0] + " | " + (arrayy[mini])[3])
         #Set nilai yang sudah di sortir menjadi nilai yang pasti lebih besar terbesar agar bisa dibandingkan
         array[mini] = "[[[[[["
         min = "[[[[[["
     return
+lihat_laporan()
