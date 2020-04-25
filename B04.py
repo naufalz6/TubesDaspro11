@@ -22,6 +22,6 @@ def tiket_hilang():
           kehilangan[i][0]=kehilangan[i][0]+uname
           kehilangan[i][1]=kehilangan[i][1]+date
           kehilangan[i][2]=kehilangan[i][2]+idw
-          kehilangan[i][3]=kehilangan[i][3]+n
+          kehilangan[i][3]=str(int(kehilangan[i][3])+n)
     print("Laporan kehilangan tiket Anda telah direkam.")
     return
