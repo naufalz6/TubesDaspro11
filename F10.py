@@ -1,5 +1,4 @@
 def Kritik_Saran (ID,Tanggal,KS):
-    import csv
     data = open("kritiksaran.csv",'a')
     data.writelines("\n;"+Tanggal+";"+ID+";"+KS)
     print("\nKritik dan saran Anda kami terima.")
